@@ -8,42 +8,40 @@ import { ActivatedRoute } from "@angular/router";
     template: ''
 })
 
-export class BaseListCtl extends BaseCtl{
+export class BaseListCtl extends BaseCtl {
 
     @ViewChildren('checkboxes') checkboxes!: QueryList<ElementRef>;
 
-     deleteRecordList: any[] = [];
+    deleteRecordList: any[] = [];
 
     isMasterSel: boolean = false;
 
 
-      constructor(endpoint: String, locator: ServiceLocatorService, route: ActivatedRoute) {
+    constructor(endpoint: String, locator: ServiceLocatorService, route: ActivatedRoute) {
         super(endpoint, locator, route);
-
         this.preload();
     }
 
-    override ngOnInit(){
-        
+    override ngOnInit() {
         this.preload();
         this.search();
     }
 
-     previous() {
+    previous() {
         this.isMasterSel = false;
         this.form.pageNo--
         this.search();
     }
 
     next() {
-         this.isMasterSel = false;
+        this.isMasterSel = false;
         this.form.pageNo++;
         this.search();
     }
 
-    checkUncheckAll(event:any){
+    checkUncheckAll(event: any) {
         const checked = event.target.checked;
-        this.checkboxes.forEach(cb => cb.nativeElement.checked=checked);
+        this.checkboxes.forEach(cb => cb.nativeElement.checked = checked);
     }
 
     checklistUpdate() {
@@ -52,8 +50,8 @@ export class BaseListCtl extends BaseCtl{
     }
 
     override deleteMany() {
-        
-         this.form.error = false;
+
+        this.form.error = false;
         this.deleteRecordList = [];
 
         this.checkboxes.forEach(cb => {
@@ -71,7 +69,4 @@ export class BaseListCtl extends BaseCtl{
         }
         this.isMasterSel = false;
     }
-   
-
-
 }

@@ -61,7 +61,9 @@
         "Login": "लॉगिन",
         "MarksheetMeritList": "मार्कशीट मेरिट सूची",
         "GetMarksheet": "मार्कशीट प्राप्त करें",
-        "Javadoc": "जावाडॉक"
+        "Javadoc": "जावाडॉक",
+        "AddAllowlist": "अनुमति सूची जोड़ें",
+        "AllowlistList": "अनुमति सूची"
     },
     "LocaleSelect": {
         "Select": "-------चुनें-------",
@@ -115,6 +117,27 @@
         "Course": "कोर्स",
         "Subject": "विषय",
         "Timetable": "समय सारणी",
-        "Faculty": "फैकल्टी"
+        "Faculty": "फैकल्टी",
+        "Allowlist": "अनुमति सूची"
+    },
+    "AllowList": {
+        "AddTitle": "अनुमति सूची जोड़ें",
+        "UpdateTitle": "अनुमति सूची अपडेट करें",
+        "ListTitle": "अनुमति सूची",
+        "AllowCode": "अनुमति कोड",
+        "UserName": "उपयोगकर्ता नाम",
+        "Source": "स्रोत",
+        "Status": "स्थिति",
+        "Placeholders": {
+            "AllowCode": "अनुमति कोड दर्ज करें",
+            "UserName": "उपयोगकर्ता नाम दर्ज करें",
+            "Source": "स्रोत दर्ज करें"
+        }
+    },
+    "SelectOptions": {
+        "Select": "------------चयन करें------------",
+        "Active": "सक्रिय",
+        "Inactive": "निष्क्रिय",
+        "Blocked": "अवरुद्ध"
     }
 }

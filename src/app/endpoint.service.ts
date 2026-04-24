@@ -30,11 +30,6 @@ export class EndpointService {
   public JASPERREPORT = this.SERVER_URL + "/Jasper";
   public INVESTOR = this.SERVER_URL + "/Investor";
   public LOAN = this.SERVER_URL + "/Loan";
-
-
-
-
-
-
+  public ALLOWLIST = this.SERVER_URL + "/AllowList";
 
 }

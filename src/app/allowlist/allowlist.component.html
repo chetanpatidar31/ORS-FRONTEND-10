@@ -1,0 +1,186 @@
+<div class="container pt-4" style="margin-top:100px; margin-bottom:100px;">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- TITLE -->
+                    <h3 class="text-center text-primary pb-3" *ngIf="!form.data.id">
+                        {{'AllowList.AddTitle' | translate}}
+                    </h3>
+
+                    <h3 class="text-center text-primary pb-3" *ngIf="form.data.id>0">
+                        {{'AllowList.UpdateTitle' | translate}}
+                    </h3>
+
+                    <!-- SUCCESS -->
+                    <div *ngIf="!form.error && form.message" class="alert alert-success">
+                        {{form.message}}
+                    </div>
+
+                    <!-- ERROR -->
+                    <div *ngIf="form.error && form.message" class="alert alert-danger">
+                        {{form.message}}
+                    </div>
+
+                    <form>
+
+                        <!-- ALLOW CODE -->
+                        <label>
+                            <b>{{'AllowList.AllowCode' | translate}}</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                            </div>
+
+                            <input type="text" class="form-control"
+                                name="allowCode"
+                                [(ngModel)]="form.data.allowCode"
+                                placeholder="{{'AllowList.Placeholders.AllowCode' | translate}}">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.allowCode}}</span>
+                        </div>
+
+
+                        <!-- USER NAME -->
+                        <label class="mt-2">
+                            <b>{{'AllowList.UserName' | translate}}</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+
+                            <input type="text" class="form-control"
+                                name="username"
+                                [(ngModel)]="form.data.username"
+                                placeholder="{{'AllowList.Placeholders.UserName' | translate}}">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.username}}</span>
+                        </div>
+
+
+                        <!-- SOURCE -->
+                        <label class="mt-2">
+                            <b>{{'AllowList.Source' | translate}}</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+
+                            <input type="text" class="form-control"
+                                name="source"
+                                [(ngModel)]="form.data.source"
+                                placeholder="{{'AllowList.Placeholders.Source' | translate}}">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.source}}</span>
+                        </div>
+
+
+                        <!-- STATUS -->
+                        <label class="mt-2">
+                            <b>{{'AllowList.Status' | translate}}</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-toggle-on"></i>
+                                </div>
+                            </div>
+
+                            <select class="form-control"
+                                name="status"
+                                [(ngModel)]="form.data.status">
+
+                                <option value="undefined">
+                                    {{'SelectOptions.Select' | translate}}
+                                </option>
+
+                                <option value="ACTIVE">
+                                    {{'SelectOptions.Active' | translate}}
+                                </option>
+
+                                <option value="INACTIVE">
+                                    {{'SelectOptions.Inactive' | translate}}
+                                </option>
+
+                                <option value="BLOCKED">
+                                    {{'SelectOptions.Blocked' | translate}}
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.status}}</span>
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="text-center mt-3">
+
+                            <button *ngIf="!form.data.id"
+                                type="button"
+                                class="btn btn-success"
+                                (click)="submit()">
+                                {{'Buttons.Save' | translate}}
+                            </button>
+
+                            &nbsp;
+
+                            <button *ngIf="!form.data.id"
+                                type="button"
+                                class="btn btn-warning btn-md"
+                                (click)="reset()">
+                                {{'Buttons.Reset' | translate}}
+                            </button>
+
+                            <button *ngIf="form.data.id > 0"
+                                type="button"
+                                class="btn btn-primary"
+                                (click)="submit()">
+                                {{'Buttons.Update' | translate}}
+                            </button>
+
+                            &nbsp;
+
+                            <button *ngIf="form.data.id > 0"
+                                type="button"
+                                class="btn btn-info"
+                                (click)="forward('/allowlistlist')">
+                                {{'Buttons.List' | translate}}
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+</div>

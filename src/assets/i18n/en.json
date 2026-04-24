@@ -60,7 +60,9 @@
         "Login": "Login",
         "MarksheetMeritList": "Marksheet Merit List",
         "GetMarksheet": "Get Marksheet",
-        "Javadoc": "Javadoc"
+        "Javadoc": "Javadoc",
+        "AddAllowlist": "Add Allowlist",
+        "AllowlistList": "Allow List"
     },
     "LocaleSelect": {
         "Select": "-------Select-------",
@@ -138,6 +140,27 @@
         "Course": "Course",
         "Subject": "Subject",
         "Timetable": "Timetable",
-        "Faculty": "Faculty"
+        "Faculty": "Faculty",
+        "Allowlist": "Allowlist"
+    },
+    "AllowList": {
+        "AddTitle": "Add Allow List",
+        "UpdateTitle": "Update Allow List",
+        "ListTitle": "Allow List",
+        "AllowCode": "Allow Code",
+        "UserName": "User Name",
+        "Source": "Source",
+        "Status": "Status",
+        "Placeholders": {
+            "AllowCode": "Enter Allow Code",
+            "UserName": "Enter User Name",
+            "Source": "Enter Source"
+        }
+    },
+    "SelectOptions": {
+        "Select": "------------Select------------",
+        "Active": "Active",
+        "Inactive": "Inactive",
+        "Blocked": "Blocked"
     }
 }

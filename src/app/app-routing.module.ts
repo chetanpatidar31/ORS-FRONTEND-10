@@ -42,6 +42,8 @@ import { GetMarksheetComponent } from './marksheet/get-marksheet.component';
 import { ForgetPasswordComponent } from './login/forget-password.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { MyProfileComponent } from './user/my-profile.component';
+import { AllowlistListComponent } from './allowlist/allowlist-list.component';
+import { AllowlistComponent } from './allowlist/allowlist.component';
 
 const routes: Routes = [
   {
@@ -320,7 +322,7 @@ const routes: Routes = [
     component: InvestorComponent
   },
 
- 
+
   {
     path: 'investor/:id',
     component: InvestorComponent
@@ -333,7 +335,7 @@ const routes: Routes = [
     component: LoanComponent
   },
 
-  
+
 
   {
     path: 'loan/:id',
@@ -359,7 +361,21 @@ const routes: Routes = [
     path: 'myprofile/:id',
     component: MyProfileComponent
   },
+  //AllowList
+  {
+    path: 'allowlist',
+    component: AllowlistComponent
+  },
 
+  {
+    path: 'allowlistlist',
+    component: AllowlistListComponent
+  },
+
+  {
+    path: 'allowlist/:id',
+    component: AllowlistComponent
+  },
 
 ];
 

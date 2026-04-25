@@ -63,7 +63,9 @@
         "GetMarksheet": "मार्कशीट प्राप्त करें",
         "Javadoc": "जावाडॉक",
         "AddAllowlist": "अनुमति सूची जोड़ें",
-        "AllowlistList": "अनुमति सूची"
+        "AllowlistList": "अनुमति सूची",
+        "AddAccesslog": "एक्सेस लॉग जोड़ें",
+        "AccesslogList": "एक्सेस लॉग सूची"
     },
     "LocaleSelect": {
         "Select": "-------चुनें-------",
@@ -118,7 +120,8 @@
         "Subject": "विषय",
         "Timetable": "समय सारणी",
         "Faculty": "फैकल्टी",
-        "Allowlist": "अनुमति सूची"
+        "Allowlist": "अनुमति सूची",
+        "Accesslog": "एक्सेस लॉग"
     },
     "AllowList": {
         "AddTitle": "अनुमति सूची जोड़ें",
@@ -134,10 +137,25 @@
             "Source": "स्रोत दर्ज करें"
         }
     },
+    "AccessLog": {
+        "AddTitle": "एक्सेस लॉग जोड़ें",
+        "UpdateTitle": "एक्सेस लॉग अपडेट करें",
+        "ListTitle": "एक्सेस लॉग सूची",
+        "AccesslogCode": "एक्सेस लॉग कोड",
+        "UserName": "उपयोगकर्ता नाम",
+        "AccessTime": "एक्सेस समय",
+        "Status": "स्थिति",
+        "Placeholders": {
+            "AccesslogCode": "एक्सेस लॉग कोड दर्ज करें",
+            "UserName": "उपयोगकर्ता नाम दर्ज करें"
+        }
+    },
     "SelectOptions": {
         "Select": "------------चयन करें------------",
         "Active": "सक्रिय",
         "Inactive": "निष्क्रिय",
-        "Blocked": "अवरुद्ध"
+        "Blocked": "अवरुद्ध",
+        "Success": "सफल",
+        "Failed": "विफल"
     }
 }

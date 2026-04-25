@@ -1,0 +1,168 @@
+<div class="container-fluid" style="margin-top: 100px; margin-bottom: 100px;">
+
+    <h1 align="center" class="text-primary font-weight-bold pb-3">
+        <u>{{'AccessLog.ListTitle' | translate}}</u>
+    </h1>
+
+    <!-- SUCCESS -->
+    <div *ngIf="!form.error && form.message" class="row mt-3">
+        <div class="col-md-4 offset-md-4 alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{form.message}}
+        </div>
+    </div>
+
+    <!-- ERROR -->
+    <div *ngIf="form.error && form.message" class="row">
+        <div class="col-md-4 offset-md-4 alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{form.message}}
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div *ngIf="form.list.length > 0" class="row mb-4">
+
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+
+            <!-- ACCESS LOG CODE -->
+            <label class="mr-2 font-weight-bold mb-0">
+                {{'AccessLog.AccesslogCode' | translate}}:
+            </label>
+            <input type="text" class="form-control mr-3" style="width:160px"
+                name="accesslogCode"
+                [(ngModel)]="form.searchParams.accesslogCode"
+                placeholder="{{'AccessLog.Placeholders.AccesslogCode' | translate}}">
+
+            <!-- USER NAME -->
+            <label class="mr-2 font-weight-bold mb-0">
+                {{'AccessLog.UserName' | translate}}:
+            </label>
+            <input type="text" class="form-control mr-3" style="width:170px"
+                name="username"
+                [(ngModel)]="form.searchParams.username"
+                placeholder="{{'AccessLog.Placeholders.UserName' | translate}}">
+
+            <!-- STATUS -->
+            <label class="mr-2 font-weight-bold mb-0">
+                {{'AccessLog.Status' | translate}}:
+            </label>
+            <select class="form-control mr-3" style="width:170px"
+                name="status"
+                [(ngModel)]="form.searchParams.status">
+
+                <option value="undefined">
+                    {{'SelectOptions.Select' | translate}}
+                </option>
+
+                <option value="SUCCESS">Success</option>
+                <option value="FAILED">Failed</option>
+                <option value="BLOCKED">Blocked</option>
+
+            </select>
+
+            <!-- BUTTONS -->
+            <button class="btn btn-primary mr-2" (click)="search()">
+                {{'Buttons.Search' | translate}}
+            </button>
+
+            <button class="btn btn-dark mr-2" (click)="reset()">
+                {{'Buttons.Reset' | translate}}
+            </button>
+
+            <button class="btn btn-warning" (click)="forward('/accesslog')">
+                {{'Buttons.Add' | translate}}
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div *ngIf="form.list.length > 0" class="table-responsive">
+
+        <table class="table table-bordered table-hover table-striped">
+
+            <thead class="thead-dark text-center">
+                <tr>
+
+                    <th>
+                        <input type="checkbox" [(ngModel)]="isMasterSel" (change)="checkUncheckAll($event)" />
+                    </th>
+
+                    <th>{{'Table.SNo' | translate}}</th>
+                    <th>{{'AccessLog.AccesslogCode' | translate}}</th>
+                    <th>{{'AccessLog.UserName' | translate}}</th>
+                    <th>{{'AccessLog.AccessTime' | translate}}</th>
+                    <th>{{'AccessLog.Status' | translate}}</th>
+                    <th>{{'UserForm.Table.Edit' | translate}}</th>
+
+                </tr>
+            </thead>
+
+            <tbody class="text-center">
+
+                <tr *ngFor="let m of form.list; let i = index">
+
+                    <td>
+                        <input type="checkbox" #checkboxes (change)="checklistUpdate()" [id]="m.id">
+                    </td>
+
+                    <td>{{(form.pageNo*5)+i+1}}</td>
+                    <td>{{m.accesslogCode}}</td>
+                    <td>{{m.username}}</td>
+                    <td>{{m.accessTime | date:'dd-MM-yyyy hh:mm a'}}</td>
+                    <td>{{m.status}}</td>
+
+                    <td>
+                        <a (click)="forward('/accesslog/' + m.id)"
+                           style="cursor:pointer"
+                           class="text-primary">
+                            Edit
+                        </a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div *ngIf="form.list.length > 0" class="row mt-3">
+
+        <div class="col-md-4">
+            <button class="btn btn-warning"
+                (click)="previous()"
+                [disabled]="form.pageNo == 0">
+                {{'Buttons.Previous' | translate}}
+            </button>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <button class="btn btn-danger"
+                (click)="deleteMany()">
+                {{'Buttons.Delete' | translate}}
+            </button>
+        </div>
+
+        <div class="col-md-4 text-right">
+            <button class="btn btn-warning"
+                (click)="next()"
+                [disabled]="form.nextListSize == 0">
+                {{'Buttons.Next' | translate}}
+            </button>
+        </div>
+
+    </div>
+
+    <!-- BACK -->
+    <div *ngIf="form.list.length == 0" class="text-center mt-4">
+        <button class="btn btn-secondary" (click)="reset()">
+            {{'Buttons.Back' | translate}}
+        </button>
+    </div>
+
+</div>

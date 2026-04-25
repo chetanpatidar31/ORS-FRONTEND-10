@@ -41,8 +41,6 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { DoctorListComponent } from './doctor/doctor-list.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingListComponent } from './shopping/shopping-list.component';
-import { AccessLogComponent } from './access-log/access-log.component';
-import { AccessLogListComponent } from './AccessLog/access-log-list.component';
 import { PolicyComponent } from './policy/policy.component';
 import { MarksheetmeritListComponent } from './marksheet/marksheetmerit-list.component';
 import { JasperReportComponent } from './jasper-report/jasper-report.component';
@@ -56,6 +54,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AllowlistComponent } from './allowlist/allowlist.component';
 import { AllowlistListComponent } from './allowlist/allowlist-list.component';
+import { AccesslogComponent } from './accesslog/accesslog.component';
+import { AccesslogListComponent } from './accesslog/accesslog-list.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -99,8 +99,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     DoctorListComponent,
     ShoppingComponent,
     ShoppingListComponent,
-    AccessLogComponent,
-    AccessLogListComponent,
     PolicyComponent,
     MarksheetmeritListComponent,
     JasperReportComponent,
@@ -110,7 +108,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ChangePasswordComponent,
     MyProfileComponent,
     AllowlistComponent,
-    AllowlistListComponent
+    AllowlistListComponent,
+    AccesslogComponent,
+    AccesslogListComponent
 
   ],
   imports: [

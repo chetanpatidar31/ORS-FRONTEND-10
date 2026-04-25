@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccessLogListComponent } from './access-log-list.component';
+import { AccesslogComponent } from './accesslog.component';
 
-describe('AccessLogListComponent', () => {
-  let component: AccessLogListComponent;
-  let fixture: ComponentFixture<AccessLogListComponent>;
+describe('AccesslogComponent', () => {
+  let component: AccesslogComponent;
+  let fixture: ComponentFixture<AccesslogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccessLogListComponent ]
+      declarations: [ AccesslogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AccessLogListComponent);
+    fixture = TestBed.createComponent(AccesslogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

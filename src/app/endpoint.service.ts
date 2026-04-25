@@ -22,7 +22,6 @@ export class EndpointService {
   public PRIORITY = this.SERVER_URL + "/Priority";
   public DOCTOR = this.SERVER_URL + "/Doctor";
   public SHOPPING = this.SERVER_URL + "/Shopping";
-  public ACCESSLOG = this.SERVER_URL + "/Accesslog";
   public CONFIGURATION = this.SERVER_URL + "/Configuration";
   public BROADCAST = this.SERVER_URL + "/Broadcast";
   public VISITOR = this.SERVER_URL + "/Visitor";
@@ -31,5 +30,6 @@ export class EndpointService {
   public INVESTOR = this.SERVER_URL + "/Investor";
   public LOAN = this.SERVER_URL + "/Loan";
   public ALLOWLIST = this.SERVER_URL + "/AllowList";
+  public ACCESSLOG = this.SERVER_URL + "/Accesslog";
 
 }

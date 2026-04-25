@@ -31,8 +31,6 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { DoctorListComponent } from './doctor/doctor-list.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingListComponent } from './shopping/shopping-list.component';
-import { AccessLogComponent } from './access-log/access-log.component';
-import { AccessLogListComponent } from './AccessLog/access-log-list.component';
 import { PolicyComponent } from './policy/policy.component';
 import { MarksheetmeritListComponent } from './marksheet/marksheetmerit-list.component';
 import { JasperReportComponent } from './jasper-report/jasper-report.component';
@@ -44,6 +42,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { MyProfileComponent } from './user/my-profile.component';
 import { AllowlistListComponent } from './allowlist/allowlist-list.component';
 import { AllowlistComponent } from './allowlist/allowlist.component';
+import { AccesslogComponent } from './accesslog/accesslog.component';
+import { AccesslogListComponent } from './accesslog/accesslog-list.component';
 
 const routes: Routes = [
   {
@@ -283,21 +283,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'accesslog',
-    component: AccessLogComponent
-  },
-
-  {
-    path: 'accessloglist',
-    component: AccessLogListComponent
-  },
-
-  {
-    path: 'accesslog/:id',
-    component: AccessLogComponent
-  },
-
-  {
     path: 'policy',
     component: PolicyComponent
   },
@@ -375,6 +360,21 @@ const routes: Routes = [
   {
     path: 'allowlist/:id',
     component: AllowlistComponent
+  },
+  // accesslog
+  {
+    path: 'accesslog',
+    component: AccesslogComponent
+  },
+
+  {
+    path: 'accessloglist',
+    component: AccesslogListComponent
+  },
+
+  {
+    path: 'accesslog/:id',
+    component: AccesslogComponent
   },
 
 ];

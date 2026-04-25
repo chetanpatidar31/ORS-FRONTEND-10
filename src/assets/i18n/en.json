@@ -62,7 +62,9 @@
         "GetMarksheet": "Get Marksheet",
         "Javadoc": "Javadoc",
         "AddAllowlist": "Add Allowlist",
-        "AllowlistList": "Allow List"
+        "AllowlistList": "Allow List",
+        "AddAccesslog":"Add Accesslog",
+        "AccesslogList":"Accesslog List"
     },
     "LocaleSelect": {
         "Select": "-------Select-------",
@@ -141,7 +143,8 @@
         "Subject": "Subject",
         "Timetable": "Timetable",
         "Faculty": "Faculty",
-        "Allowlist": "Allowlist"
+        "Allowlist": "Allowlist",
+        "Accesslog":"Access Log"
     },
     "AllowList": {
         "AddTitle": "Add Allow List",
@@ -157,10 +160,25 @@
             "Source": "Enter Source"
         }
     },
+    "AccessLog": {
+        "AddTitle": "Add Access Log",
+        "UpdateTitle": "Update Access Log",
+        "ListTitle": "Access Log List",
+        "AccesslogCode": "Accesslog Code",
+        "UserName": "Username",
+        "AccessTime": "Access Time",
+        "Status": "Status",
+        "Placeholders": {
+            "AccesslogCode": "Enter Accesslog Code",
+            "UserName": "Enter Username"
+        }
+    },
     "SelectOptions": {
         "Select": "------------Select------------",
         "Active": "Active",
         "Inactive": "Inactive",
-        "Blocked": "Blocked"
+        "Blocked": "Blocked",
+        "Success":"Success",
+        "Failed":"Failed"
     }
 }

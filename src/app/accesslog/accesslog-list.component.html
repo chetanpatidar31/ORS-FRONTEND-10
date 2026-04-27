@@ -33,24 +33,15 @@
                 [(ngModel)]="form.searchParams.accesslogCode"
                 placeholder="{{'AccessLog.Placeholders.AccesslogCode' | translate}}">
 
-            <!-- STATUS -->
+
+            <!-- USER NAME -->
             <label class="mr-2 font-weight-bold mb-0">
                 {{'AccessLog.UserName' | translate}}:
             </label>
-            <select class="form-control mr-3" style="width:170px" name="username"
-                [(ngModel)]="form.searchParams.username">
-
-                <option value="undefined">
-                    {{'SelectOptions.Select' | translate}}
-                </option>
-
-                <option *ngFor="let obj of form.preload.accessLogList" [value]="obj.key">
-                    {{obj.value}}
-                </option>
-
-            </select>
-
-
+            <input type="text" class="form-control mr-3" style="width:170px"
+                name="username"
+                [(ngModel)]="form.searchParams.username"
+                placeholder="{{'AccessLog.Placeholders.UserName' | translate}}">
 
             <!-- STATUS -->
             <label class="mr-2 font-weight-bold mb-0">
@@ -62,9 +53,9 @@
                     {{'SelectOptions.Select' | translate}}
                 </option>
 
-                <option value="SUCCESS">Success</option>
-                <option value="FAILED">Failed</option>
-                <option value="BLOCKED">Blocked</option>
+                <option *ngFor="let obj of form.preload.accessLogList" [value]="obj.key">
+                    {{obj.value}}
+                </option>
 
             </select>
 
